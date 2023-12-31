@@ -1,0 +1,13 @@
+
+{% extends 'base_generic.html' %}
+
+{% block title %}Editar Mesero{% endblock %}
+
+{% block content %}
+<h1>Editar Mesero</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Actualizar mesero</button>
+</form>
+{% endblock %}

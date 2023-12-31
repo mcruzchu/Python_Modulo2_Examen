@@ -1,0 +1,27 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Meseros Jóvenes Peruanos{% endblock %}
+
+{% block content %}
+<h1>Meseros Jóvenes Peruanos menores de 30 años</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>DNI</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for mesero in meseros %}
+        <tr>
+            <td>{{ mesero.nombre }}</td>
+            <td>{{ mesero.edad }} años</td>
+            <td>{{ mesero.dni }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+

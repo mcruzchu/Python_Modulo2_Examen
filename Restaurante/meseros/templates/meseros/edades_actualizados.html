@@ -1,0 +1,9 @@
+
+
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<h2>Las edades de los meseros han sido actualizadas.</h2>
+<p>Serás redirigido a la lista de meseros en breve...</p>
+<meta http-equiv="refresh" content="5;url={% url 'lista_meseros' %}" />
+{% endblock %}

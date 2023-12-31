@@ -1,0 +1,25 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Lista de Meseros{% endblock %}
+
+{% block content %}
+<h1>Lista de Meseros</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>DNI</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for mesero in meseros %}
+        <tr>
+            <td>{{ mesero.nombre }}</td>
+            <td>{{ mesero.edad }}</td>
+            <td>{{ mesero.dni }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

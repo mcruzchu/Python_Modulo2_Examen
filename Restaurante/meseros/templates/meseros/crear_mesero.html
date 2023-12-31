@@ -1,0 +1,13 @@
+
+{% extends 'base_generic.html' %}
+
+{% block title %}Crear Mesero{% endblock %}
+
+{% block content %}
+<h1>Crear un nuevo Mesero</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Crear Mesero</button>
+</form>
+{% endblock %}

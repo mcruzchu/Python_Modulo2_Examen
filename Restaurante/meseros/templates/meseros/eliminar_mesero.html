@@ -1,0 +1,13 @@
+
+{% extends 'base_generic.html' %}
+
+{% block title %}Eliminar Mesero{% endblock %}
+
+{% block content %}
+<h1>¿Estás seguro que deseas eliminar a "{{ object.nombre }}"?</h1>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a href="{% url 'meseros_lista' %}">Cancelar</a>
+</form>
+{% endblock %}

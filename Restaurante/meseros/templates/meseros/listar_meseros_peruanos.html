@@ -1,0 +1,26 @@
+
+{% extends 'base_generic.html' %}
+
+{% block title %}Meseros de Perú{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Meseros de Perú</h1>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Nacionalidad</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for mesero in meseros %}
+            <tr>
+                <td>{{ mesero.nombre }}</td>
+                <td>{{ mesero.nacionalidad }}</td>
+                <td>{{ mesero.edad }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

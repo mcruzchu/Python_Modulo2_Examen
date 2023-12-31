@@ -1,0 +1,23 @@
+{% extends 'base_generic.html' %}
+
+{% block title %}Platos Peruanos{% endblock %}
+
+{% block content %}
+<h1>Platos Peruanos con precio mayor a 40 soles</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for plato in platos %}
+        <tr>
+            <td>{{ plato.nombre }}</td>
+            <td>S/. {{ plato.precio }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
